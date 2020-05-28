@@ -1,16 +1,15 @@
-# CODEDOODLES
-
-Toy Joy
+#Toy Joy
 
 Basic Toy Swap client
-This is a basic client written with plain javascript for the express toy swap server.
+This is a basic client written with plain javascript for the express toy joy server.
 
 It supports:
 
 authentication (login/logout)
 listing all toys
 adding a toy
-
+editing/changing a toy
+removing a toy
 Some things to note:
 
 Cors
