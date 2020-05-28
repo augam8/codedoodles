@@ -21,17 +21,17 @@ router.get("/:id", getListing)
 // CREATE
 // POST on '/posts'
 // Creates a new post
-//router.post("/", makeListing)
+router.post("/", makeListing)
 
 // DELETE
 // DELETE on '/posts/:id'
 // Deletes a post with id
-//router.delete("/:id", removeListing)
+router.delete("/:id", removeListing)
 
 // UPDATE
 // PUT on 'posts/:id'
 // Updates a post with id
-//router.put("/:id", changeListing)
+router.put("/:id", changeListing)
 
 
 

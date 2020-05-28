@@ -37,9 +37,60 @@ const getListing = function(req, res) {
 	})
 }
 
+const makeListing = function(req, res) {
+	// execute the query from getPostById
+	addListing(req).save((err, listing) => {
+		if (err) {
+			res.status(500)
+			res.json({
+				error: err.message
+			})
+		}
+		res.status(201)
+		res.send(listing)
+	})
+}
 
+const removeListing = function(req, res) {
+	// Check for error from middleware
+	if (req.error) {
+		res.status(req.error.status)
+		res.send(req.error.message)
+	} else {
+		// execute the query from deletePost
+		deleteListing(req.params.id).exec(err => {
+			if (err) {
+				res.status(500)
+				res.json({
+					error: err.message
+				})
+			}
+			res.sendStatus(204)
+		})
+	}
+}
+
+const changeListing = function(req, res) {
+	// Check for error from middleware
+	if (req.error) {
+		res.status(req.error.status)
+		res.send(req.error.message)
+	} else {
+		// execute the query from updatePost
+		updateListing(req).exec((err, listing) => {
+			if (err) {
+				res.status(500)
+				res.json({
+					error: err.message
+				})
+			}
+			res.status(200)
+			res.send(listing)
+		})
+	}
+}
 
 module.exports ={
-    getListings, getListing
+    getListings, getListing, makeListing, removeListing, changeListing
 
 }
