@@ -1,0 +1,5 @@
+{ "username": "johnny", "toy": "car", "description": "remote control car", "age_range": "3-7", "condition": "new", "suburb": "sunshine" }
+{ "username": "holly", "toy": "barbie doll", "description": "beach edition", "age_range": "3-11", "condition": "new", "suburb": "st albans" }
+{ "username": "susan", "toy": "kitchen toys", "description": "set of kitchen tools", "age_range": "4-9", "condition": "used", "suburb": "ormond" }
+{ "username": "dave", "toy": "legos", "description": "mix set of legos", "age_range": "5-14", "condition": "used", "suburb": "dandenong" }
+{ "username": "jessica", "toy": "puzzle", "description": "farm puzzle, all pieces complete", "age_range": "2-4", "condition": "used", "suburb": "essendon" }
