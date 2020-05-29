@@ -1,10 +1,11 @@
 const {
 	getAllListings,
 	getListingById,
-	addPost,
-	deletePost,
-	updatePost
+	addListing,
+	deleteListing,
+	updateListing
 } = require ("../utils/listings_utilities")
+const Listing = require ("../model/listing")
 
 //function getPosts(req,res){
     //res.send(getAllPosts(req))
@@ -58,7 +59,7 @@ const removeListing = function(req, res) {
 		res.send(req.error.message)
 	} else {
 		// execute the query from deletePost
-		deleteListing(req.params.id).exec(err => {
+		Listing.findByIdAndRemove(req.params.id).exec(err => {
 			if (err) {
 				res.status(500)
 				res.json({

@@ -1,3 +1,29 @@
 GET http://localhost:3033
 ###
-GET http://localhost:3033/listings
+
+GET http://localhost:3033/listings/5ecf528731d0268fd265348b
+###
+DELETE http://localhost:3033/listings/5ed05bbc8b6a2e88e9ffb6f7 HTTP/1.1
+
+
+###
+POST http://localhost:3033/listings/ HTTP/1.1
+content-type: application/json 
+
+{
+    "username" : "tony",
+    "toy" : "train set",
+    "description" : "thomas the tank engine with friends set",
+    "condition" : "used",
+    "age_range" : "5-9",
+    "suburb" : "footscray"
+}
+
+###
+PUT http://localhost:3033/listings/5ecf528731d0268fd265348b
+content-type: application/json 
+
+{
+   "username" : "Jeff", 
+   "toy" : "Legos updated version" 
+}
