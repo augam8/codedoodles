@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toy Joy</title>
+    <link rel="stylesheet" href="style.css" >
+
+</head>
+<body>
+    <h1>Create Listing</h1>
+    <div>
+        <div id="add-listingDiv">
+            <div class="inputGroup">
+                <label class="label">Toy:</label>
+                <input type="text" id="toy" required=true class="input"></input>
+            </div>
+            <div class="inputGroup">
+                <label class="label">Description:</label>
+                <textarea id="description" required=true></textarea>
+            </div>
+            <div class="inputGroup">
+                <label class="label">Age Range:</label>
+                <input type="text" id="age_range" required=true class="input"></input>
+            </div>
+            <div class="inputGroup">
+                <label class="label">Condition:</label>
+                <input type="text" id="condition" required=true class="input"></input>
+            </div>
+            <div class="inputGroup">
+                <label class="label">Suburb:</label>
+                <input type="text" id="suburb" required=true class="input"></input>
+
+                
+                
+                
+  
+
+
+            </div>
+            <input type="submit" class= "button-submit" id="add-listing" onclick="alert('Your Listing has been created!')" value="add listing"></input>
+            
+            <button type="button" id="edit" >Edit Listing</button>
+    
+        
+    </div>
+
+    <div id="listings"></div>
+    <script src="script.js"></script>
+
+
+
+
+
+
+    
+</body>
+</html>

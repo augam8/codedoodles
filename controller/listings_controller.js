@@ -39,8 +39,10 @@ const getListing = function(req, res) {
 }
 
 const makeListing = function(req, res) {
+	console.log(req.body)
 	// execute the query from getPostById
 	addListing(req).save((err, listing) => {
+		console.log(listing)
 		if (err) {
 			res.status(500)
 			res.json({

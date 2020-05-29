@@ -1,0 +1,32 @@
+
+
+
+.inputGroup{
+    color: blue;
+}
+
+h1 {
+    color:green;
+}
+.button-submit  {
+
+    background-color:yellow;
+}
+
+.button {
+    background-color: #6114a8;
+    color: white;
+    border: none;
+    padding: .1em .5em;
+    width: 100px;
+    margin-left: 1em;
+    border-radius: 5px;
+  }
+
+#add-listing{
+
+   
+    text-align: center; 
+    
+}
+  

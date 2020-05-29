@@ -1,7 +1,7 @@
 GET http://localhost:3033
 ###
 
-GET http://localhost:3033/listings/5ecf528731d0268fd265348b
+GET http://localhost:3033/listings/
 ###
 DELETE http://localhost:3033/listings/5ed05bbc8b6a2e88e9ffb6f7 HTTP/1.1
 
