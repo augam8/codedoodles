@@ -3,6 +3,9 @@ SERVER_URL="http://localhost:3033"
 
 let listingsDiv = document.getElementById("listings")
 let addListingDiv = document.getElementById("add-listing")
+let loginUser = ""
+let logout = document.getElementById("logout") //added
+let password = ""
 
 function getListings() {
 	fetch(SERVER_URL+'/listings').then((response) => response.json())
@@ -74,14 +77,14 @@ function displayListings(listings) {
 
 function handleAddListing() {
 	
-	let username = document.getElementById("username")
+	
 	let toy = document.getElementById("toy")
 	let description = document.getElementById("description")
 	let age_range = document.getElementById("age_range")
 	let condition = document.getElementById("condition")
 	let suburb = document.getElementById("suburb")
 	let listing = {
-		'username': username.value,
+		'username': loginUser,
 		'toy': toy.value,
 		'description': description.value,
 		'age_range': age_range.value,
@@ -89,15 +92,37 @@ function handleAddListing() {
 		'suburb': suburb.value
 	}
 	addListing(listing)
-	username.value = null
+	
 	toy.value = null	
 	description.value = null
 	age_range.value = null
 	condition.value = null
 	suburb.value = null
+	login.value = null //added
+	logout.value = null //added
 
 }
 
+function handleLogIn(){
+	let username = document.getElementById("username")
+	document.getElementById("userInfo").textContent = `${username.value} is Logged In`
+	loginUser = username.value
+	document.getElementById("login").classList.add("hidden")
+	username.value = null
+	document.getElementById("logout").classList.remove("hidden")
+}
 
-getListings()
+function handleLogOut(){  
+	let password = document.getElementById("password") //added
+	logoutUser = username.value   //added
+	document.getElementById("login").classList.add("hidden") //added
+	logout.value = null //added
+	document.getElementById("logout").classList.remove("hidden") //added
+	
+}
+//getListings()
+
+
+document.getElementById("login-button").addEventListener("click", handleLogIn)
+document.getElementById("logout-button").addEventListener("click", handleLogOut)//added
 document.getElementById("add-listing").addEventListener("click", handleAddListing)

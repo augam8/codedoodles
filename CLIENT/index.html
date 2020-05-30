@@ -7,11 +7,35 @@
     <title>Toy Joy</title>
     <link rel="stylesheet" href="style.css" >
 
+
 </head>
 <body>
-    <h1>Create Listing</h1>
+
+    <h1>Create Toy Listing</h1>
     <div>
+        <div id="userInfo"></div>
+        <div class="hidden" id="logout">
+                <button  id="logout-button">Log Out</button>
+        </div>
+        <div id="login">
+                <div class="inputGroup">
+                        <label class="label">Username:</label>
+                        <input type="text" id="username" required=true class="input"></input>
+
+                    </div>
+                    <div class="inputGroup">
+                            <label class="label">Password:</label>
+                            <input type="password" id="password" required=true class="input"></input>
+    
+                        </div>
+                    <button id="login-button">Log in</button>
+
+        </div>
+
+            
         <div id="add-listingDiv">
+                
+                    
             <div class="inputGroup">
                 <label class="label">Toy:</label>
                 <input type="text" id="toy" required=true class="input"></input>
@@ -39,11 +63,14 @@
 
 
             </div>
-            <input type="submit" class= "button-submit" id="add-listing" onclick="alert('Your Listing has been created!')" value="add listing"></input>
+            <input type="submit" class= "button-submit" id="add-listing" onclick="alert('Your Listing has been created!')" value="Add Listing"></input>
             
-            <button type="button" id="edit" >Edit Listing</button>
+            <!-- <button type="button" id="edit" >Edit Listing</button> -->
     
-        
+            <button type="button" id="show-listings"> <a href="file:///Users/mac/codedoodles/CLIENT/show.html">Show Listing</a></button>
+            <button type="button" id="show-listings"> <a href="file:///Users/mac/codedoodles/CLIENT/index.html">Logout</a></button>
+
+            <!-- <div id="show-listings"> <a href="file:///Users/mac/codedoodles/CLIENT/show.html">show listings</a></div> -->
     </div>
 
     <div id="listings"></div>

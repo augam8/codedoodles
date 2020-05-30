@@ -1,32 +1,74 @@
 
 
 
-.inputGroup{
+.inputGroup {
     color: blue;
-}
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 1em;
+  }
 
 h1 {
-    color:green;
+    color: darkmagenta;
+    margin-left: 50px;
 }
 .button-submit  {
 
-    background-color:yellow;
-}
-
-.button {
-    background-color: #6114a8;
-    color: white;
-    border: none;
+    background-color: #c49de9;
+    color: black;
+    border: rounded;
     padding: .1em .5em;
     width: 100px;
+    height: 25px;
     margin-left: 1em;
+    margin-top: 2em;
     border-radius: 5px;
+    text-align: center;
+
+}
+
+button {
+    background-color: #c49de9;
+    color: black;
+    border: rounded;
+    padding: .1em .5em;
+    width: 100px;
+    height: 25px;
+    margin-left: 1em;
+    margin-top: 2em;
+    border-radius: 5px;
+    text-align: center;
   }
 
-#add-listing{
+#add-listingDiv{
 
    
-    text-align: center; 
+    text-align: left; 
+    margin: 5em;
     
 }
-  
+
+.label {
+    margin-right: 2em;
+}
+
+input {
+
+justify-items: right;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.divShow  {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+row-gap: 30px;
+
+}
+
